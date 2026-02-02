@@ -27,12 +27,12 @@ function ExpertiseCard({ item, index }: { item: typeof expertiseData[0], index: 
   return (
     <div
       ref={ref}
-      className={`relative w-md h-[300px] sm:h-[350px] md:h-[520px] rounded-3xl overflow-hidden group scroll-fade-in-up ${isVisible ? 'visible' : ''}`}
+      className={`relative w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden group scroll-fade-in-up ${isVisible ? 'visible' : ''}`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
       {/* Default Title */}
-      <div className="absolute top-0 left-0 right-0 text-black  p-4 group-hover:opacity-0 transition-opacity duration-500">
-        <h3 className="text-xl sm:text-xl font-bold">
+      <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent text-white p-3 sm:p-4 group-hover:opacity-0 transition-opacity duration-500 z-10">
+        <h3 className="text-lg sm:text-xl font-bold">
           {item.title}
         </h3>
       </div>
@@ -46,11 +46,11 @@ function ExpertiseCard({ item, index }: { item: typeof expertiseData[0], index: 
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-6">
-        <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-3 sm:p-4 md:p-6 z-20">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 text-white">
           {item.title}
         </h3>
-        <p className="text-gray-200 text-sm">
+        <p className="text-gray-200 text-xs sm:text-sm">
           {item.desc}
         </p>
       </div>
@@ -64,16 +64,16 @@ export default function Expertise() {
   const [headingRef, headingVisible] = useScrollAnimation();
 
   return (
-    <section id="expertise" className="py-16 sm:py-20 md:py-24 bg-[#2f2f2f] text-white">
+    <section id="expertise" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#2f2f2f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2
           ref={headingRef}
-          className={`text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-14 scroll-fade-in-up ${headingVisible ? 'visible' : ''}`}
+          className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-14 scroll-fade-in-up ${headingVisible ? 'visible' : ''}`}
         >
           Our Expertise
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mx-40">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {expertiseData.map((item, i) => (
             <ExpertiseCard key={i} item={item} index={i} />
           ))}

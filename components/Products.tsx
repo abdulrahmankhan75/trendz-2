@@ -42,7 +42,18 @@ export default function Products() {
           Our Products
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mx-40">
+        <div className="
+  grid
+  grid-cols-1
+  sm:grid-cols-2
+  lg:grid-cols-3
+  gap-6
+  md:gap-8
+  mx-0
+  md:mx-20
+  lg:mx-40
+">
+
           {products.map((img, i) => (
             <ProductCard key={i} img={img} index={i} />
           ))}
