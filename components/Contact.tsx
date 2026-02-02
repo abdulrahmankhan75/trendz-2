@@ -14,55 +14,71 @@ export default function Contact() {
 
         <div className=" grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Half - Contact Form */}
+          {/* Left Half - Info Card */}
+          {/* Left Half - Info Card */}
           <div
             ref={formRef}
-            className={`bg-pink-50/50 border border-gray-300 p-5 rounded-xl scroll-fade-in-left ${formVisible ? 'visible' : ''}`}
+            className={`bg-white border border-gray-300 p-8 rounded-xl scroll-fade-in-left ${formVisible ? 'visible' : ''}`}
           >
+
+            {/* Heading */}
             <h2
               ref={headingRef}
-              className={`text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center scroll-fade-in-up ${headingVisible ? 'visible' : ''}`}
+              className={`text-3xl sm:text-4xl font-bold mb-10 text-center scroll-fade-in-up ${headingVisible ? 'visible' : ''}`}
             >
               Get in Touch
             </h2>
-            <form action="https://formspree.io/f/abcdwxyz"
-              method="POST" className="space-y-4 sm:space-y-6 ">
-              <input
-                name="name"
-                placeholder="Your Name"
-                required
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
-              />
 
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
-              />
+            {/* Info Grid */}
+            <div className="grid gap-6">
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300"
-              />
-
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows={4}
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300 resize-none"
-              />
-
-              <button
-                type="submit"
-                className="w-full bg-black text-white py-3 rounded-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 active:scale-95"
+              {/* Email */}
+              <a
+                href="mailto:info@trendzuniforms.com"
+                className="flex items-center gap-4 border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition"
               >
-                Send Message
-              </button>
-            </form>
+                <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+                  @
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Email</p>
+                  <p className="font-medium">info@trendzuniforms.com</p>
+                </div>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                className="flex items-center gap-4 border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition"
+              >
+                <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+                  W
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">WhatsApp</p>
+                  <p className="font-medium">+91 99999 99999</p>
+                </div>
+              </a>
+
+              {/* Address */}
+              <div className="flex items-center gap-4 border border-gray-300 rounded-lg p-4">
+                <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+                  📍
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Address</p>
+                  <p className="font-medium leading-relaxed">
+                    400 University Drive Suite 200,<br />
+                    Coral Gables, FL 33134 USA
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
 
           {/* Right Half - Map */}
           <div

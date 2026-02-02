@@ -2,19 +2,13 @@
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-function PartnerLogo({ logo, index }: { logo: string, index: number }) {
-  const [ref, isVisible] = useScrollAnimation();
-
+function LogoItem({ logo }: { logo: string }) {
   return (
-    <div
-      ref={ref}
-      className={`w-44 sm:w-44 h-36 sm:h-36 flex items-center justify-center scroll-scale-in hover:scale-110 transition-transform duration-300 ${isVisible ? 'visible' : ''}`}
-      style={{ transitionDelay: `${index * 0.1}s` }}
-    >
+    <div className="w-40 h-28 flex items-center justify-center hover:scale-110 transition-transform duration-300">
       <img
         src={logo}
         alt="Fabric Partner"
-        className="max-h-full object-contain grayscale-0 hover:scale-110 transition-all duration-500"
+        className="max-h-full object-contain"
       />
     </div>
   );
@@ -29,23 +23,50 @@ export default function FabricPartners() {
     "/images/fabric5.png",
   ];
 
+  // duplicate array for seamless loop
+  const loopLogos = [...partners, ...partners];
+
   const [headingRef, headingVisible] = useScrollAnimation();
 
   return (
-    <section id="fabric-partners" className="py-12 sm:py-16 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="fabric-partners" className="py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+
         <h2
           ref={headingRef}
-          className={`text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 scroll-fade-in-up ${headingVisible ? 'visible' : ''}`}
+          className={`text-3xl sm:text-4xl font-bold text-center mb-12 scroll-fade-in-up ${headingVisible ? "visible" : ""
+            }`}
         >
           Our Fabric Partners
         </h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-16">
-          {partners.map((logo, i) => (
-            <PartnerLogo key={i} logo={logo} index={i} />
-          ))}
+        {/* Row 1 */}
+        <div className="overflow-hidden mb-8">
+          <div className="flex w-max gap-16 marquee-left">
+            {loopLogos.map((logo, i) => (
+              <LogoItem key={`r1-${i}`} logo={logo} />
+            ))}
+          </div>
         </div>
+
+        {/* Row 2 */}
+        <div className="overflow-hidden mb-8">
+          <div className="flex w-max gap-16 marquee-right">
+            {loopLogos.map((logo, i) => (
+              <LogoItem key={`r2-${i}`} logo={logo} />
+            ))}
+          </div>
+        </div>
+
+        {/* Row 3 */}
+        <div className="overflow-hidden">
+          <div className="flex w-max gap-16 marquee-left">
+            {loopLogos.map((logo, i) => (
+              <LogoItem key={`r3-${i}`} logo={logo} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
