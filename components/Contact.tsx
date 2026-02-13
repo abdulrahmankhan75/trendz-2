@@ -48,7 +48,7 @@ export default function Contact() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/916304965528"
                 target="_blank"
                 className="flex items-center gap-4 border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition"
               >
@@ -57,7 +57,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">WhatsApp</p>
-                  <p className="font-medium">+91 99999 99999</p>
+                  <p className="font-medium">+91 63049 65528</p>
                 </div>
               </a>
 
@@ -69,8 +69,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-gray-500">Address</p>
                   <p className="font-medium leading-relaxed">
-                    400 University Drive Suite 200,<br />
-                    Coral Gables, FL 33134 USA
+                    9FQJ+J9J, Cross Road, near by Mayur Chaat House, Ramkoti, Bogulkunta, Abids, Hyderabad, Telangana 500001
                   </p>
                 </div>
               </div>
@@ -85,18 +84,25 @@ export default function Contact() {
             ref={mapRef}
             className={`scroll-fade-in-right ${mapVisible ? 'visible' : ''}`}
           >
-            <div className="w-full h-full min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-                title="Location Map"
-              />
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
+                <iframe
+                  src="https://www.google.com/maps?q=17.385044,78.486671&hl=en&z=16&output=embed"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: 0,
+                    maxWidth: '100%'
+                  }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location Map"
+                />
+              </div>
             </div>
           </div>
         </div>

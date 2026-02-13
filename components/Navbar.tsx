@@ -8,7 +8,7 @@ const links = [
   { name: "About", id: "about" },
   { name: "Our Products", id: "products" },
   { name: "Testimonials", id: "testimonials" },
-  // { name: "Contact", id: "contact" },
+  { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
@@ -51,6 +51,17 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
 
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Toggle menu"
+        >
+          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
+
         <h1 className="text-lg sm:text-xl font-bold">Trendz</h1>
 
         {/* Desktop Menu */}
@@ -74,21 +85,11 @@ export default function Navbar() {
           href={`#contact`}
           className={`transition-all duration-300 ${active === "contact"
             ? "text-black border-b-2 border-black"
-            : "text-gray-500 hover:text-white bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900 transition-all duration-300"
+            : "bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900"
             }`}
         >
           Contact
         </a>
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Toggle menu"
-        >
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-        </button>
 
       </div>
 

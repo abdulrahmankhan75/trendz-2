@@ -21,6 +21,15 @@ export default function FabricPartners() {
     "/images/fabric3.png",
     "/images/fabric4.png",
     "/images/fabric5.png",
+    "/images/fabric6.png",
+    "/images/fabric7.png",
+    "/images/fabric8.png",
+    "/images/fabric9.png",
+    "/images/fabric10.png",
+    "/images/fabric11.png",
+    "/images/fabric12.png",
+    "/images/fabric13.png",
+    "/images/fabric14.png",
   ];
 
   // duplicate array for seamless loop
@@ -59,13 +68,13 @@ export default function FabricPartners() {
         </div>
 
         {/* Row 3 */}
-        <div className="overflow-hidden">
+        {/* <div className="overflow-hidden">
           <div className="flex w-max gap-16 marquee-left">
             {loopLogos.map((logo, i) => (
               <LogoItem key={`r3-${i}`} logo={logo} />
             ))}
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
