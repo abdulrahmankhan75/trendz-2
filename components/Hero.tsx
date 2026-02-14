@@ -1,30 +1,48 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import HeroGetInTouch from "./contactHero";
 
+const banners = [
+    "/images/banner1.png",
+    "/images/banner2.png",
+    "/images/banner3.png",
+];
 
 export default function Hero() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+        }, 5000); // Change slide every 5 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section
             id="home"
-            className="relative h-screen bg-[url('/images/hero.jpg')] bg-cover bg-center flex items-center overflow-hidden"
+            className="relative h-screen w-full flex items-center overflow-hidden"
         >
-            {/* Overlay */}
-            {/* <div className="absolute inset-0 bg-black/50" /> */}
-
-            <div className="w-full px-4 sm:px-6 md:px-10 max-w-full">
-                <div className="bg-black/60 p-4 sm:p-6 md:ml-4 mb-4 rounded-lg w-fit max-w-[calc(100%-2rem)] animate-slide-in-left">
-                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold break-words">
-                        Delivering Quality
-                    </h1>
-                </div>
-                <div className="bg-black/60 p-4 sm:p-6 md:ml-4 rounded-lg w-fit max-w-[calc(100%-2rem)] animate-slide-in-left-delay">
-                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-normal break-words">
-                        In Bulk
-                    </h1>
-                </div>
+            {/* Slideshow Container */}
+            <div className="absolute inset-0 w-full h-full">
+                {banners.map((banner, index) => (
+                    <div
+                        key={index}
+                        className={`pt-20 absolute inset-0 w-full h-full transition-all duration-1500 ease-in-out ${index === currentIndex
+                            ? "opacity-100 scale-100"
+                            : "opacity-0 scale-105"
+                            }`}
+                    >
+                        <img
+                            src={banner}
+                            alt={`Banner ${index + 1}`}
+                            className="w-full h-full object-cover object-center"
+                        />
+                    </div>
+                ))}
             </div>
-
-            {/* Figma-style Get In Touch Form */}
-            <HeroGetInTouch />
         </section>
     );
 }
