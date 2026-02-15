@@ -8,7 +8,7 @@ const links = [
   { name: "About", id: "about" },
   { name: "Our Products", id: "products" },
   { name: "Testimonials", id: "testimonials" },
-  { name: "Contact", id: "contact" },
+  // { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 w-full bg-[##FFFFFF] shadow z-50 transition-all duration-300 animate-slide-in-left"
+      className={`fixed top-0 w-full bg-white z-50 transition-all duration-300 animate-slide-in-left ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
 
