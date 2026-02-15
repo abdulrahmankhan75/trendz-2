@@ -61,7 +61,7 @@ export default function Navbar() {
           <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
           <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
-        <img src="/images/logo.png" alt="Trendz" className="w-20" />
+        <img src="/images/logo.png" alt="Trendz" className="w-16" />
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-6 xl:gap-8 text-sm uppercase font-medium">
