@@ -23,6 +23,22 @@ export default function FabricPartners() {
     "/images/fabric5.png",
     "/images/fabric6.png",
     "/images/fabric7.png",
+    "/images/fabric1.png",
+    "/images/fabric2.png",
+    "/images/fabric3.png",
+    "/images/fabric4.png",
+    "/images/fabric5.png",
+    "/images/fabric6.png",
+    "/images/fabric7.png",
+  ];
+  const partners2 = [
+    "/images/fabric8.png",
+    "/images/fabric9.png",
+    "/images/fabric10.png",
+    "/images/fabric11.png",
+    "/images/fabric12.png",
+    "/images/fabric13.png",
+    "/images/fabric14.png",
     "/images/fabric8.png",
     "/images/fabric9.png",
     "/images/fabric10.png",
@@ -31,7 +47,6 @@ export default function FabricPartners() {
     "/images/fabric13.png",
     "/images/fabric14.png",
   ];
-
   // duplicate array for seamless loop
   const loopLogos = [...partners, ...partners];
 
@@ -52,7 +67,7 @@ export default function FabricPartners() {
         {/* Row 1 */}
         <div className="overflow-hidden mb-8">
           <div className="flex w-max gap-16 marquee-left">
-            {loopLogos.map((logo, i) => (
+            {partners.map((logo, i) => (
               <LogoItem key={`r1-${i}`} logo={logo} />
             ))}
           </div>
@@ -61,7 +76,7 @@ export default function FabricPartners() {
         {/* Row 2 */}
         <div className="overflow-hidden mb-8">
           <div className="flex w-max gap-16 marquee-right">
-            {loopLogos.map((logo, i) => (
+            {partners2.map((logo, i) => (
               <LogoItem key={`r2-${i}`} logo={logo} />
             ))}
           </div>

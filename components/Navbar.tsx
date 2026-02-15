@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 w-full bg-[#F1F1F1] shadow z-50 transition-all duration-300 animate-slide-in-left"
+      className="fixed top-0 w-full bg-[##FFFFFF] shadow z-50 transition-all duration-300 animate-slide-in-left"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
 
@@ -61,8 +61,7 @@ export default function Navbar() {
           <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
           <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
-
-        <h1 className="text-lg sm:text-xl font-bold">Trendz</h1>
+        <img src="/images/logo.png" alt="Trendz" className="w-20" />
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-6 xl:gap-8 text-sm uppercase font-medium">

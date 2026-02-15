@@ -1,37 +1,40 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const expertiseData = [
   {
     title: "Fabrics",
-    desc: "Premium quality fabrics sourced from trusted partners.",
+    desc: "We source and work with high performance, breathable, and durable fabrics tailored to suit every industry. From luxury hospitality to demanding industrial environments, comfort and functionality always come first.",
     image: "/images/expertise1.png",
   },
   {
-    title: "Designing",
-    desc: "Modern and functional uniform designs.",
+    title: "Quality",
+    desc: "Every uniform is designed with precision and finished with strict quality checks. From stitching to fit, we ensure consistency, durability, and a polished look that reflects your brand standards.",
     image: "/images/expertise2.png",
   },
   {
-    title: "Stitching",
-    desc: "High-precision stitching for durability and comfort.",
+    title: "Time",
+    desc: "We value your deadlines. With streamlined production and flexible operations, we deliver on schedule without compromising on quality, even for urgent and custom requirements.",
     image: "/images/expertise3.png",
   },
 ];
 
 function ExpertiseCard({ item, index }: { item: typeof expertiseData[0], index: number }) {
   const [ref, isVisible] = useScrollAnimation();
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div
       ref={ref}
-      className={`relative w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden group scroll-fade-in-up ${isVisible ? 'visible' : ''}`}
+      onClick={() => setIsActive(!isActive)}
+      className={`relative w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden group scroll-fade-in-up cursor-pointer ${isVisible ? 'visible' : ''}`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
       {/* Default Title */}
-      <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent text-white p-3 sm:p-4 group-hover:opacity-0 transition-opacity duration-500 z-10">
+      <div className={`absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent text-white p-3 sm:p-4 transition-opacity duration-500 z-10 ${isActive ? 'opacity-0' : 'group-hover:opacity-0'}`}>
         <h3 className="text-lg sm:text-xl font-bold">
           {item.title}
         </h3>
@@ -42,14 +45,14 @@ function ExpertiseCard({ item, index }: { item: typeof expertiseData[0], index: 
         alt={item.title}
         width={600}
         height={420}
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        className={`w-full h-full object-cover transition-transform duration-700 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-3 sm:p-4 md:p-6 z-20">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 text-white">
+      <div className={`absolute inset-0 bg-black/70 transition-opacity duration-500 flex flex-col justify-end p-3 sm:p-4 md:p-6 z-20 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+        <h2 className="text-xl sm:text-xl md:text-2xl font-semibold mb-2 text-white">
           {item.title}
-        </h3>
+        </h2>
         <p className="text-gray-200 text-xs sm:text-sm">
           {item.desc}
         </p>

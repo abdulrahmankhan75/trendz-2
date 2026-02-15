@@ -61,6 +61,20 @@ export default function Contact() {
                 </div>
               </a>
 
+              {/* Phone */}
+              <a
+                href="tel:+916304965528"
+                className="flex items-center gap-4 border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition"
+              >
+                <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+                  📞
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Phone</p>
+                  <p className="font-medium">+91 63049 65528</p>
+                </div>
+              </a>
+
               {/* Address */}
               <div className="flex items-center gap-4 border border-gray-300 rounded-lg p-4">
                 <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
