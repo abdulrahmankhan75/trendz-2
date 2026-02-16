@@ -34,7 +34,7 @@ export default function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:info@trendzuniforms.com"
+                href="mailto:Trendzuniforms9@gmail.com"
                 className="group flex items-center gap-4 border-2 border-gray-300 rounded-lg p-4 cursor-pointer transition-all duration-300 hover:border-black hover:shadow-lg hover:scale-[1.02] hover:bg-gray-50 active:scale-[0.98]"
               >
                 <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-gray-800 group-hover:scale-110">
@@ -44,7 +44,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300">Email</p>
-                  <p className="font-medium group-hover:text-black transition-colors duration-300">info@trendzuniforms.com</p>
+                  <p className="font-medium group-hover:text-black transition-colors duration-300">Trendzuniforms9@gmail.com</p>
                 </div>
                 <svg className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -64,7 +64,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300">WhatsApp</p>
-                  <p className="font-medium group-hover:text-black transition-colors duration-300">+91 63049 65528</p>
+                  <p className="font-medium group-hover:text-black transition-colors duration-300">+91 6304965528</p>
                 </div>
                 <svg className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300">Phone</p>
-                  <p className="font-medium group-hover:text-black transition-colors duration-300">+91 63049 65528</p>
+                  <p className="font-medium group-hover:text-black transition-colors duration-300">+91 6304965528</p>
                 </div>
                 <svg className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -101,7 +101,7 @@ export default function Contact() {
                 <div className="flex-1">
                   <p className="text-sm text-gray-500">Address</p>
                   <p className="font-medium leading-relaxed">
-                    9FQJ+J9J, Cross Road, near by Mayur Chaat House, Ramkoti, Bogulkunta, Abids, Hyderabad, Telangana 500001
+                    #4-1-897, first floor, opp bonggulkunta water reserviou tilak road, abids, hyd- 500001
                   </p>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function Contact() {
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
               <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
                 <iframe
-                  src="https://www.google.com/maps?q=17.385044,78.486671&hl=en&z=16&output=embed"
+                  src="https://www.google.com/maps?q=17.3899145,78.4801223&hl=en&z=16&output=embed"
                   style={{
                     position: 'absolute',
                     top: 0,

@@ -36,8 +36,8 @@ export default function Hero() {
     return (
         <section
             id="home"
-            onClick={scrollToContact}
-            className="relative h-screen w-full flex items-center overflow-hidden cursor-pointer"
+            // onClick={scrollToContact}
+            className="relative h-screen w-full flex items-center overflow-hidden "
         >
             {/* Slideshow Container */}
             <div className="absolute inset-0 w-full h-full">

@@ -21,8 +21,7 @@ export default function About() {
 
             <br /><br />
             Our skilled team brings creativity and fresh design ideas to everyday uniforms, offering custom styles, fabrics, and colors with no fixed templates. Whether it is custom made, cut and sew, or private labeling, we stay flexible to handle urgent and special requirements.
-            We have proudly worked with leading hotels, corporates, restaurants, educational institutions, and international clients across India, UAE, Saudi Arabia, and Bahrain. Our product range includes uniforms for hospitality, housekeeping, chefs, industrial teams, corporate wear, and casual business attire. We are also honored to have supplied uniforms to the AP and Telangana Police departments
-
+            We have proudly worked with leading hotels, corporates, restaurants, educational institutions, and international clients across India, UAE, Saudi Arabia, and Bahrain. Our product range includes uniforms for hospitality, housekeeping, chefs, industrial teams, corporate wear, and casual business attire. We are also honored to have supplied uniforms to the AP and Telangana Police departments.
           </p>
         </div>
 

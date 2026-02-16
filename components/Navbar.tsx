@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 w-full bg-white z-50 transition-all duration-300 animate-slide-in-left ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
+      className={`fixed top-0 w-full bg-black z-50 transition-all duration-300 animate-slide-in-left ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
 
@@ -57,9 +57,9 @@ export default function Navbar() {
           className="lg:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
         <img src="/images/logo.png" alt="Trendz" className="w-16" />
 
@@ -70,8 +70,8 @@ export default function Navbar() {
               key={link.id}
               href={`#${link.id}`}
               className={`transition-all duration-300 ${active === link.id
-                ? "text-black border-b-2 border-black"
-                : "text-gray-500 hover:text-black"
+                ? "text-white border-b-2 border-white"
+                : "text-gray-400 hover:text-white"
                 }`}
             >
               {link.name}
@@ -83,8 +83,8 @@ export default function Navbar() {
           key="contact"
           href={`#contact`}
           className={`transition-all duration-300 ${active === "contact"
-            ? "text-black border-b-2 border-black"
-            : "bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900"
+            ? "text-white border-b-2 border-white"
+            : "bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200"
             }`}
         >
           Contact
@@ -93,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden bg-[#F1F1F1] border-t transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden bg-gray-900 border-t border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-4 py-4 flex flex-col gap-4">
           {links.map(link => (
             <a
@@ -101,8 +101,8 @@ export default function Navbar() {
               href={`#${link.id}`}
               onClick={handleLinkClick}
               className={`text-sm uppercase font-medium transition-all duration-300 py-2 ${active === link.id
-                ? "text-black border-l-4 border-black pl-4"
-                : "text-gray-500 hover:text-black pl-4"
+                ? "text-white border-l-4 border-white pl-4"
+                : "text-gray-400 hover:text-white pl-4"
                 }`}
             >
               {link.name}
