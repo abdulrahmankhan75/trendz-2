@@ -34,18 +34,14 @@ export default function FabricPartners() {
   const partners2 = [
     "/images/fabric8.png",
     "/images/fabric9.png",
-    "/images/fabric10.png",
     "/images/fabric11.png",
     "/images/fabric12.png",
     "/images/fabric13.png",
-    // "/images/fabric14.png",
     "/images/fabric8.png",
     "/images/fabric9.png",
-    "/images/fabric10.png",
     "/images/fabric11.png",
     "/images/fabric12.png",
     "/images/fabric13.png",
-    // "/images/fabric14.png",
   ];
   // duplicate array for seamless loop
   const loopLogos = [...partners, ...partners];
