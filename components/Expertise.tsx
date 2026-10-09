@@ -13,12 +13,12 @@ const expertiseData = [
   {
     title: "Quality",
     desc: "Every uniform is designed with precision and finished with strict quality checks. From stitching to fit, we ensure consistency, durability, and a polished look that reflects your brand standards.",
-    image: "/images/expertise2.png",
+    image: "/images/expertis2.png",
   },
   {
     title: "Time",
     desc: "We value your deadlines. With streamlined production and flexible operations, we deliver on schedule without compromising on quality, even for urgent and custom requirements.",
-    image: "/images/expertise3.png",
+    image: "/images/expertis3.png",
   },
 ];
 
