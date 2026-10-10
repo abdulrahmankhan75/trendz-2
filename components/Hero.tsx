@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import HeroGetInTouch from "./contactHero";
 
 const banners = [
-    "/images/banner1.png",
-    "/images/banner2.png",
-    "/images/banner3.png",
+    "/images/ban1.png",
+    "/images/ban2.png",
+    "/images/ban3.png",
 ];
 
 const mobileBanners = [
@@ -62,7 +62,7 @@ export default function Hero() {
                 {mobileBanners.map((banner, index) => (
                     <div
                         key={`mobile-${index}`}
-                        className={`pt-20 absolute inset-0 w-full h-full transition-all duration-1500 ease-in-out block md:hidden ${index === currentIndex
+                        className={`pt-16 sm:pt-20 absolute inset-0 w-full h-full transition-all duration-1500 ease-in-out block md:hidden ${index === currentIndex
                             ? "opacity-100 scale-100"
                             : "opacity-0 scale-105"
                             }`}

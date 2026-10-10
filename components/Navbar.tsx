@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 w-full bg-black z-50 transition-all duration-300 animate-slide-in-left ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
+      className={`fixed top-0 w-full bg-[#2f2f2f] z-50 transition-all duration-300 animate-slide-in-left ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
 
@@ -93,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden bg-gray-900 border-t border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden bg-[#2f2f2f] border-t border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-4 py-4 flex flex-col gap-4">
           {links.map(link => (
             <a
